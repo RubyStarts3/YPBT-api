@@ -1,7 +1,0 @@
----
-development:
-  YOUTUBE_API_KEY: '<secret here>'
-  video_id: '<secret here>'
-test:
-  YOUTUBE_API_KEY: '<secret here>'
-  video_id: '<secret here>'
