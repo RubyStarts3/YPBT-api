@@ -21,16 +21,10 @@ class LoadVideoFromYT
   }
 
   register :fetch_video_data, lambda { |input|
-    begin
-      video = YoutubeVideo::Video.find(video_id: input[:video_id])
-      find = true
-    rescue
-      find = false
-    end
-    # need revise
+    video = YoutubeVideo::Video.find(video_id: input[:video_id])
 
-    if find
-      Right(video: video, video_id: input[:video_id]) # need revise
+    if video
+      Right(video: video)
     else
       Left(Error.new(:bad_request,
         "Video (video_id: #{input[:video_id]}) could not be found"))
@@ -38,11 +32,10 @@ class LoadVideoFromYT
   }
 
   register :create_new_video_record, lambda { |input|
-    success = CreateVideoFromYT.call(input[:video], input[:video_id])
-                                                      # need revise
+    success = CreateVideoFromYT.call(input[:video])
 
     if success
-      Right(video: input[:video], video_id: input[:video_id]) # need revise
+      Right(video: input[:video])
     else
       Left(Error.new(:internal_error,
         "Cannot create video (video_id: #{input[:video_id]})"))
@@ -51,10 +44,9 @@ class LoadVideoFromYT
 
   register :render_video_info, lambda { |input|
     results = VideoInfo.new(
-      input[:video_id], input[:video].title, input[:video].description,
-       # need revise
+      input[:video].id, input[:video].title, input[:video].description,
       input[:video].view_count , input[:video].like_count,
-      input[:video].dislike_count, "" # input[:video].duration need revise
+      input[:video].dislike_count, input[:video].duration
     )
     Right(results)
   }

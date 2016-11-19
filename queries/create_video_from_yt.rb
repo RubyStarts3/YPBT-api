@@ -2,20 +2,20 @@
 
 # Create a new video and its downstream data in the database using YPBT gem
 class CreateVideoFromYT
-  def self.call(video, video_id)
+  def self.call(video)
     # video: Video object from YPBT
     begin
-      create_video_record(video, video_id) # need revise
+      create_video_record(video)
       success = true
     rescue
       success = false
     end
   end
 
-  def self.create_video_record(video, video_id) # need revise
+  def self.create_video_record(video)
     video_info = VideoInfo.new(
-      video_id, video.title, video.description, video.view_count,
-      video.like_count, video.dislike_count, "" #video.duration, need revise
+      video.id, video.title, video.description, video.view_count,
+      video.like_count, video.dislike_count, video.duration
     )
     created_video = CreateRecord.new_video(video_info)
     
@@ -27,24 +27,21 @@ class CreateVideoFromYT
   def self.create_comment_record(video_id, comment)
     comment_info = CommentInfo.new(
       video_id, comment.comment_id, comment.published_at,
-      "", # comment.updated_at ? comment.updated_at : "" need revise
+      (comment.updated_at ? comment.updated_at : ""),
       comment.text_display, comment.like_count
     )
     created_comment = CreateRecord.new_comment(comment_info)
     
     comment.time_tags.each do |timetag|
-      create_timetag_record(created_comment.id, timetag, comment.like_count)
-                                                           # need revise
+      create_timetag_record(created_comment.id, timetag)
     end
     
     create_author_record(created_comment.id, comment.author)
   end
 
-  def self.create_timetag_record(comment_id, timetag, comment_like_count)
-                                                        # need revise
+  def self.create_timetag_record(comment_id, timetag)
     timetag_info = TimetagInfo.new(
-      comment_id, comment_like_count, 0,  # need revise
-      timetag.start_time
+      comment_id, timetag.like_count, 0, timetag.start_time
     )
     created_timetag = CreateRecord.new_timetag(timetag_info)
   end

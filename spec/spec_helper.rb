@@ -5,6 +5,7 @@ sh "rake db:migrate"
 require 'minitest/autorun'
 require 'minitest/rg'
 require 'rack/test'
+require 'rack/vcr'
 require 'vcr'
 require 'webmock'
 
@@ -14,6 +15,10 @@ include Rack::Test::Methods
 
 def app
   YPBT_API
+end
+
+unless ENV['YOUTUBE_API_KEY']
+  ENV['YOUTUBE_API_KEY'] = app.config.YOUTUBE_API_KEY
 end
 
 FIXTURES_FOLDER = 'spec/fixtures'
@@ -29,10 +34,6 @@ AUTHORS_CASSETTE = 'authors'
 VCR.configure do |c|
   c.cassette_library_dir = CASSETTES_FOLDER
   c.hook_into :webmock
-
-  unless ENV['YOUTUBE_API_KEY']
-    ENV['YOUTUBE_API_KEY'] = app.config.YOUTUBE_API_KEY
-  end
 
   c.filter_sensitive_data('<API_KEY>') { ENV['YOUTUBE_API_KEY'] }
   c.filter_sensitive_data('<API_KEY_ESCAPED>') do
