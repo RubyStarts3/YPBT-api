@@ -12,7 +12,14 @@ class YPBT_API < Sinatra::Base
 
   API_VER = 'api/v0.1'
 
+  after do
+    content_type 'application/json'
+  end
+
   get '/?' do
-    "YPBT_API latest version endpoints are at: /#{API_VER}/"
+    {
+      status: 'OK',
+      message: "YPBT_API latest version endpoints are at: /#{API_VER}/"
+    }.to_json
   end
 end

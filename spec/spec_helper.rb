@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 ENV['RACK_ENV'] = 'test'
+sh "rake db:migrate"
 
 require 'minitest/autorun'
 require 'minitest/rg'
@@ -19,6 +20,8 @@ FIXTURES_FOLDER = 'spec/fixtures'
 CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes"
 VIDEOS_CASSETTE = 'videos'
 COMMENTS_CASSETTE = 'comments'
+TIMETAGS_CASSETTE = 'timetags'
+AUTHORS_CASSETTE = 'authors'
 #CASSETTE_FILE = 'youtube_api'
 #RESULT_FILE = "#{FIXTURES_FOLDER}/yt_api_results.yml"
 #YT_RESULT = YAML.load(File.read(RESULT_FILE))
@@ -37,8 +40,8 @@ VCR.configure do |c|
   end
 end
 
-HAPPY_VIDEO_ID = 'FugHj7MGhss'
+HAPPY_VIDEO_ID = 'OyDSCKYz5sA'
 SAD_VIDEO_ID = 'XxXx888xXxX'
-REMOVED_VIDEO_ID = '5BTjZ9U5XF8'
-HAPPY_VIDEO_URL = 'https://www.youtube.com/watch?v=FugHj7MGhss'
+#REMOVED_VIDEO_ID = '5BTjZ9U5XF8'
+HAPPY_VIDEO_URL = 'https://www.youtube.com/watch?v=OyDSCKYz5sA'
 SAD_VIDEO_URL = 'https://www.youtube.com/watch?v=XxXx888xXxX'

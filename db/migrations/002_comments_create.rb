@@ -10,10 +10,7 @@ Sequel.migration do
       String :updated_at
       String :published_at
       String :text_display
-      String :author_name
-      String :author_image_url
-      String :author_channel_url
-      Int :like_count
+      Integer :like_count
     end
   end
 end
