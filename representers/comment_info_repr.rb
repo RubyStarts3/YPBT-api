@@ -8,7 +8,4 @@ class CommentInfoRepresenter < Roar::Decorator
   property :comment_id
   property :text_display
   property :like_count
-  property :author_name
-  property :author_image_url
-  property :author_channel_url
 end

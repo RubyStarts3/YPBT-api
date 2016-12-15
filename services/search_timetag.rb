@@ -7,9 +7,11 @@ class SearchTimetag
 
   register :get_timetag_info, lambda { |params|
     timetag_id = params[:timetag_id]
-    timetag = Timetag.find(id: timetag_id)
-    if timetag
-      Right(timetag: timetag)
+    timetag_info  = TimetagInfo.new(id: timetag_id)
+    timetag_found = TimetagRecord.find(timetag_info)
+
+    if timetag_found
+      Right(timetag_info: timetag_found)
     else
       Left(Error.new(:not_found,
                      "Timetag (timetag_id: #{timetag_id}) not found"))
@@ -17,10 +19,11 @@ class SearchTimetag
   }
 
   register :get_timetag_comment_info, lambda { |input|
-    timetag_id = input[:timetag].id
-    comment = GetTimetagCommentInfoQuery.call(timetag_id)
-    if comment
-      Right(timetag: input[:timetag], comment: comment)
+    timetag_id = input[:timetag_info].id
+    comment_found = GetTimetagCommentInfoQuery.call(timetag_id)
+    if comment_found
+      Right(timetag_info: input[:timetag_info],
+            comment_info: comment_found)
     else
       Left(Error.new(:internal_error,
         "Fail to get comment info (timetag_id: #{timetag_id})"))
@@ -28,32 +31,16 @@ class SearchTimetag
   }
 
   register :get_timetag_author_info, lambda { |input|
-    timetag_id = input[:timetag].id
-    author = GetTimetagAuthorInfoQuery.call(timetag_id)
-    if author
-      Right(timetag: input[:timetag], comment: input[:comment], author: author)
+    timetag_id = input[:timetag_info].id
+    author_found = GetTimetagAuthorInfoQuery.call(timetag_id)
+    if author_found
+      Right(timetag_info: input[:timetag_info],
+            comment_info: input[:comment_info],
+            author_info:  author_found)
     else
       Left(Error.new(:internal_error,
         "Fail to get author info (timetag_id: #{timetag_id})"))
     end
-  }
-
-  register :render_search_result, lambda { |input|
-    results = TimetagInfo.new(
-      id:                  input[:timetag].id,
-      start_time:          input[:timetag].start_time,
-      end_time:            input[:timetag].end_time,
-      click_count:         input[:timetag].click_count,
-      yt_like_count:       input[:timetag].yt_like_count,
-      our_like_count:      input[:timetag].our_like_count,
-      our_dislike_count:   input[:timetag].our_dislike_count,
-      tag_type:            input[:timetag].tag_type,
-      text_display:        input[:comment].text_display,
-      author_name:         input[:author].author_name,
-      author_image_url:    input[:author].author_image_url,
-      author_channel_url:  input[:author].author_channel_url
-    )
-    Right(results)
   }
 
   def self.call(params)
@@ -61,7 +48,6 @@ class SearchTimetag
       step :get_timetag_info
       step :get_timetag_comment_info
       step :get_timetag_author_info
-      step :render_search_result
     end.call(params)
   end
 end

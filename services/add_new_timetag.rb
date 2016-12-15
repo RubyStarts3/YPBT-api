@@ -47,25 +47,9 @@ class AddNewTimetag
   }
 
   register :render_timetag_info, lambda { |timetag_id|
-    timetag = Timetag.find(id: timetag_id)
-    results = TimetagInfo.new(
-      id:                    timetag.id,
-      start_time:            timetag.start_time,
-      end_time:              timetag.end_time,
-      click_count:           timetag.click_count,
-      yt_like_count:         timetag.yt_like_count,
-      our_like_count:        timetag.our_like_count,
-      tag_type:              timetag.tag_type,
-      start_time_percentage: timetag.start_time_percentage,
-      end_time_percentage:   timetag.end_time_percentage
-    )
-    Right(results)
-  }
-
-  register :render_api_info, lambda { |params|
-    results = ApiInfo.new("Add new time_tag in choosed video " +
-                          "(video_id: #{params['video_id']})")
-    Right(results)
+    timetag_info  = TimetagInfo.new(id: timetag_id)
+    timetag_found = TimetagRecord.find(timetag_info)
+    Right(timetag_info: timetag_found)
   }
 
   def self.call(params)
@@ -74,7 +58,6 @@ class AddNewTimetag
       step :check_video # is already stored in database
       step :add_new_timetag
       step :render_timetag_info
-      #step :render_api_info
     end.call(params)
   end
 

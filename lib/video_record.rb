@@ -2,29 +2,20 @@
 
 # Video record management
 class VideoRecord
+  @video_columns =
+    [:id, :video_id, :title, :description, :view_count, :like_count,
+     :dislike_count, :duration, :channel_id, :channel_title,
+     :channel_description, :channel_image_url, :last_update_time]
+
   # Create new video record
   def self.create(video_info)
-    created_video = Video.create(
-      video_id:            video_info.video_id,
-      title:               video_info.title,
-      description:         video_info.description,
-      view_count:          video_info.view_count,
-      like_count:          video_info.like_count,
-      dislike_count:       video_info.dislike_count,
-      duration:            video_info.duration,
-      channel_id:          video_info.channel_id,
-      channel_title:       video_info.channel_title,
-      channel_description: video_info.channel_description,
-      channel_image_url:   video_info.channel_image_url,
-      last_update_time: Time.now
-    )
+    video = Video.create()
+    update(video.id, video_info)
   end
 
   # Find video record
   def self.find(video_info)
-    columns = [:id, :video_id, :title, :description, :view_count, :like_count,
-               :dislike_count, :duration, :channel_id, :channel_title,
-               :channel_description, :channel_image_url, :last_update_time]
+    columns = @video_columns[0..-1]
     results = Video.where()
     columns.each do |col|
       val = video_info.send(col)
@@ -32,20 +23,13 @@ class VideoRecord
     end
 
     unless results.first.nil?
-      video_found = VideoInfo.new(
-        id:                  results.first.id,
-        video_id:            results.first.video_id,
-        title:               results.first.title,
-        description:         results.first.description,
-        view_count:          results.first.like_count,
-        dislike_count:       results.first.dislike_count,
-        duration:            results.first.duration,
-        channel_id:          results.first.channel_id,
-        channel_title:       results.first.channel_title,
-        channel_description: results.first.channel_description,
-        channel_image_url:   results.first.channel_image_url,
-        last_update_time:    results.first.last_update_time
-      )
+      video_found = VideoInfo.new()
+      columns.each do |col|
+        col_setter = (col.to_s + "=").to_sym
+        column_value = results.first.send(col)
+        video_found.send(col_setter, column_value)
+      end
+      video_found
     else
       nil
     end
@@ -53,27 +37,21 @@ class VideoRecord
 
   # Get all video records
   def self.get_all_videos()
+    columns = @video_columns[0..-1]
     results = Video.where()
-    videos_found = results.map do |video|
-      video_found = VideoInfo.new(
-        id:                  video.id,
-        video_id:            video.video_id,
-        title:               video.title,
-        description:         video.description,
-        view_count:          video.view_count,
-        like_count:          video.like_count,
-        dislike_count:       video.dislike_count,
-        duration:            video.duration,
-        channel_id:          video.channel_id,
-        channel_title:       video.channel_title,
-        channel_description: video.channel_description,
-        channel_image_url:   video.channel_image_url,
-        last_update_time:    video.last_update_time
-      )
-    end
 
-    unless videos_found.empty?
-      videos_found
+    render_info = lambda { |result|
+      video_found = VideoInfo.new()
+      columns.each do |col|
+        col_setter = (col.to_s + "=").to_sym
+        column_value = result.send(col)
+        video_found.send(col_setter, column_value)
+      end
+      video_found
+    }
+
+    unless results.first.nil?
+      videos_found = results.map &render_info
     else
       nil
     end
@@ -83,9 +61,7 @@ class VideoRecord
   def self.update(id, video_info)
     video = Video.find(id: id)
 
-    columns = [:video_id, :title, :description, :view_count, :like_count,
-               :dislike_count, :channel_id, :channel_title,
-               :channel_description, :channel_image_url, :duration]
+    columns = @video_columns[1..-2]
     columns.each do |col|
       val = video_info.send(col)
       video.send("#{col}=", video_info.send(col)) unless val.nil?

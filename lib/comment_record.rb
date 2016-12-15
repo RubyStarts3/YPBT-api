@@ -2,38 +2,21 @@
 
 # Comment record management
 class CommentRecord
+  @comment_columns =
+    [:id, :video_id, :comment_id, :published_at, :updated_at,
+     :text_display, :like_count]
+
   # Create new comment record
   def self.create(comment_info)
-    created_comment = Comment.create(
-      video_id:      comment_info.video_id,
-      comment_id:    comment_info.comment_id,
-      published_at:  comment_info.published_at,
-      updated_at:    comment_info.updated_at,
-      text_display:  comment_info.text_display,
-      like_count:    comment_info.like_count
-    )
+    comment = Comment.create()
+    update(comment.id, comment_info)
   end
 
   # Find comment record
   def self.find(comment_info)
-    columns = [:id, :video_id, :comment_id, :published_at, :updated_at,
-               :text_display, :like_count]
-    results = Comment.where()
-    columns.each do |col|
-      val = comment_info.send(col)
-      results = results.where(col => val) unless val.nil?
-    end
-
-    unless results.first.nil?
-      comment_found = CommentInfo.new(
-        id:           results.first.id,
-        video_id:     results.first.video_id,
-        comment_id:   results.first.comment_id,
-        published_at: results.first.published_at,
-        updated_at:   results.first.updated_at,
-        text_display: results.first.text_display,
-        like_count:   results.first.like_count
-      )
+    comments_found = find_all(comment_info)
+    if comments_found
+      comments_found.first
     else
       nil
     end
@@ -41,26 +24,25 @@ class CommentRecord
 
   # Find all match comment records
   def self.find_all(comment_info)
-    columns = [:id, :video_id, :comment_id, :published_at, :updated_at,
-               :text_display, :like_count]
+    columns = @comment_columns[0..-1]
     results = Comment.where()
     columns.each do |col|
       val = comment_info.send(col)
       results = results.where(col => val) unless val.nil?
     end
 
-    unless results.first.nil?
-      comments_found = results.map do |comment_found|
-        CommentInfo.new(
-          id:           comment_found.id,
-          video_id:     comment_found.video_id,
-          comment_id:   comment_found.comment_id,
-          published_at: comment_found.published_at,
-          updated_at:   comment_found.updated_at,
-          text_display: comment_found.text_display,
-          like_count:   comment_found.like_count
-        )
+    render_info = lambda { |result|
+      comment_found = CommentInfo.new()
+      columns.each do |col|
+        col_setter = (col.to_s + "=").to_sym
+        column_value = result.send(col)
+        comment_found.send(col_setter, column_value)
       end
+      comment_found
+    }
+
+    unless results.first.nil?
+      comments_found = results.map &render_info
     else
       nil
     end
@@ -70,8 +52,7 @@ class CommentRecord
   def self.update(id, comment_info)
     comment = Comment.find(id: id)
 
-    columns = [:video_id, :comment_id, :published_at, :updated_at,
-               :text_display, :like_count]
+    columns = @comment_columns[1..-1]
     columns.each do |col|
       val = comment_info.send(col)
       comment.send("#{col}=", comment_info.send(col)) unless val.nil?

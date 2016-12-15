@@ -18,11 +18,10 @@ class SearchVideoAllTimetags
 
   register :get_video_all_timetags, lambda { |input|
     video_id = input[:video_id]
-    timetags = GetVideoAllTimetagsQuery.call(video_id)
+    timetags_found = GetVideoAllTimetagsQuery.call(video_id)
 
-    if timetags
-      results = timetags
-      Right(results)
+    if timetags_found
+      Right(timetags_info: timetags_found)
     else
       Left(Error.new(:not_found, "No record existed (video_id: #{video_id})"))
     end

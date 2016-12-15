@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-#VideoInfo = Struct.new :video_id, :title, :description, :view_count,
-#                       :like_count, :dislike_count, :duration
 class VideoInfo
   attr_accessor :id, :video_id, :title, :description, :view_count, :like_count,
                 :dislike_count, :duration, :channel_id, :channel_title,

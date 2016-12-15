@@ -10,7 +10,11 @@ class YPBT_API < Sinatra::Base
     results = SearchTimetag.call(params)
 
     if results.success?
-      TimetagInfoRepresenterA.new(results.value).to_json
+      TimetagDetailRepresenter.new(
+        results.value[:comment_info],
+        results.value[:timetag_info],
+        results.value[:author_info]
+      ).to_json
     else
       ErrorRepresenter.new(results.value).to_status_response
     end
@@ -22,7 +26,9 @@ class YPBT_API < Sinatra::Base
     results = SearchVideoAllTimetags.call(params)
 
     if results.success?
-      TimetagInfoThreadRepresenter.new(results.value).to_json
+      TimetagGeneralThreadRepresenter.new(
+        results.value[:timetags_info]
+      ).to_json
     else
       ErrorRepresenter.new(results.value).to_status_response
     end
@@ -41,8 +47,7 @@ class YPBT_API < Sinatra::Base
     results = AddNewTimetag.call(request)
 
     if results.success?
-      #ApiInfoRepresenter.new(results.value).to_json
-      TimetagInfoRepresenterB.new(results.value).to_json
+      TimetagGeneralRepresenter.new(results.value[:timetag_info]).to_json
     else
       ErrorRepresenter.new(results.value).to_status_response
     end
