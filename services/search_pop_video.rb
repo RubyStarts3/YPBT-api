@@ -27,10 +27,21 @@ class SearchPopVideo
     end
   }
 
+  register :update_pop_videos_worker, lambda { |params|
+    videos_pop_info = params[:videos_pop_info]
+    videos_pop_info.each do |video_pop|
+      video_id = video_pop.video_id
+      UpdatePopVideosWorker.perform_async(video_id)
+    end
+
+    Right(videos_pop_info: videos_pop_info)
+  }
+
   def self.call(params)
     Dry.Transaction(container: self) do
       step :check_invalid_query_number
       step :get_pop_videos_info
+      step :update_pop_videos_worker
     end.call(params)
   end
 end
