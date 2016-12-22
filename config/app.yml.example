@@ -1,5 +1,13 @@
 ---
 development:
   YOUTUBE_API_KEY: '<secret here>'
+  AWS_ACCESS_KEY_ID: '<secret here>'
+  AWS_SECRET_ACCESS_KEY: '<secret here>'
+  AWS_REGION: 'user assigned'
+  POPVIDEO_QUEUE: '<user assigned>'
 test:
   YOUTUBE_API_KEY: '<secret here>'
+  AWS_ACCESS_KEY_ID: '<secret here>'
+  AWS_SECRET_ACCESS_KEY: '<secret here>'
+  AWS_REGION: '<user assigned>'
+  POPVIDEO_QUEUE: '<user assigned>'

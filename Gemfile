@@ -17,6 +17,9 @@ gem 'dry-container'
 gem 'dry-transaction'
 gem 'ruby-duration', '~> 3.2', '>= 3.2.3'
 
+gem 'aws-sdk', '~> 2'
+gem 'shoryuken'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'pry-byebug'
