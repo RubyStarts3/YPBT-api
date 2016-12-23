@@ -29,10 +29,14 @@ class SearchPopVideo
 
   register :update_pop_videos_worker, lambda { |params|
     videos_pop_info = params[:videos_pop_info]
-    videos_pop_info.each do |video_pop|
+
+    promised_updates = videos_pop_info.map do |video_pop|
       video_id = video_pop.video_id
-      UpdatePopVideosWorker.perform_async(video_id)
+      Concurrent::Promise.execute do
+        UpdatePopVideosWorker.perform_async(video_id)
+      end
     end
+    promised_updates.map(&:value)
 
     Right(videos_pop_info: videos_pop_info)
   }

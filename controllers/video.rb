@@ -32,13 +32,6 @@ class YPBT_API < Sinatra::Base
   # get popular videos from YPBT-gem
   get "/#{API_VER}/PopVideos/:number" do
     results = SearchPopVideo.call(params)
-=begin
-    videos_pop_info = results.value[:videos_pop_info]
-    videos_pop_info.each do |video_pop|
-      video_id = video_pop.video_id
-      UpdatePopVideosWorker.perform_async(video_id)
-    end
-=end
 
     if results.success?
       VideoPopThreadRepresenter.new(results.value[:videos_pop_info]).to_json
