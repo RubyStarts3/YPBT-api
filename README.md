@@ -62,7 +62,7 @@ API to access the information of comments following a given movie, such as autho
 <tr><td>like_count</td><td>int</td></tr>
 <tr><td>thumbnail_url</td><td>url</td></tr>
 </table>
-> *Optional Parameters:*
+> *Optional Parameters:*  
 > `channel_id`: websocket channel  
 > `api_key`: authorization for websocket activation  
 
