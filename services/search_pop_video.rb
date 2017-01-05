@@ -24,7 +24,7 @@ class SearchPopVideo
   }
 
   register :get_pop_videos_info, lambda { |params|
-    channel_id = param[:channel_id]
+    channel_id = params[:channel_id]
     max_results = params[:number]
     videos_pop = YoutubeVideo::Video.find_popular(max_results: max_results)
     videos_pop_info = FillPopVideosInfoQuery.call(videos_pop)
