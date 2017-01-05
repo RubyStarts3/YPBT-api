@@ -39,4 +39,8 @@ class YPBT_API < Sinatra::Base
       ErrorRepresenter.new(results.value).to_status_response
     end
   end
+
+  get '/win_a_car/?' do
+    "You won! #{params["probability"]}"
+  end
 end

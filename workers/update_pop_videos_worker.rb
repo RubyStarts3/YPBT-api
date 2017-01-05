@@ -25,9 +25,18 @@ class UpdatePopVideosWorker
   include Shoryuken::Worker
   shoryuken_options queue: config.POPVIDEO_QUEUE, auto_delete: true
 
-  def perform(_sqs_msg, video_id)
+  def perform(_sqs_msg, worker_params)
+    params = JSON.parse(worker_params)
+    video_id = params['video_id']
+    channel_id = params['channel_id']
+
     puts "REQUEST: #{video_id}"
-    Update2LatestQuery.call(video_id)
+    #Update2LatestQuery.call(video_id)
+
+    unless channel_id.nil?
+      puts "channel_id: #{channel_id}"
+    end    
+
     puts "success!"
     #puts "RESULT: #{result.value}"
 
