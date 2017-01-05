@@ -63,8 +63,8 @@ API to access the information of comments following a given movie, such as autho
 <tr><td>thumbnail_url</td><td>url</td></tr>
 </table>
 > *Optional Parameters:*
-> `channel_id`: websocket channel
-> `api_key`: authorization for websocket activation
+> `channel_id`: websocket channel  
+> `api_key`: authorization for websocket activation  
 
 ## Comment
 * <strong>Get</strong> /api/{version}/Comment/{comment_id}  
