@@ -33,9 +33,12 @@ Econfig.root = File.expand_path('..', File.dirname(__FILE__))
     Update2LatestQuery.call(video_id)
 
     unless channel_id.nil?
+      puts "ENV: #{ENV['YPBT_API']}"
+      puts "Client: #{ENV['YPBT_API']}/faye"
+      puts "Channel: /#{channel_id}"
       EM.run {
         client = Faye::Client.new("#{ENV['YPBT_API']}/faye")
-        client.publish("/#{channel_id}", 'text' => "#{video_id}")
+        #client.publish("/#{channel_id}", 'text' => "#{video_id}")
         #client = Faye::Client.new("#{ENV['YPBT_APP']}/faye")
         #client.publish("/#{channel_id}", 'text' => "#{video_id}")
         #puts "@@@@@@@@@@@@@@@@@@"
