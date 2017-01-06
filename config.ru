@@ -7,6 +7,7 @@ use Faye::RackAdapter, :mount => '/faye', :timeout => 25 do |bayeux|
   puts "puts anything."
   hash_table = {}
   expiry_time = {}
+  POP_VIDEO_NUM = 20
 
   bayeux.on(:publish) do |client_id,channel,data|
     puts "#{client_id} published #{channel}: #{data}"
@@ -20,18 +21,25 @@ use Faye::RackAdapter, :mount => '/faye', :timeout => 25 do |bayeux|
 
     hash_table[channel_id].push data
     count = hash_table[channel_id].size
-    EM.run {
-      client = Faye::Client.new("#{ENV['YPBT_APP']}/faye")
-      client.publish("/#{channel_id}", 'text' => "#{count}")
-    }
-
-    if count == 20
-      hash_table.delete channel_id
+    if count < POP_VIDEO_NUM
+      client_publish(channel_id, count)
+    elsif count >= POP_VIDEO_NUM
+      20.times { client_publish(channel_id, count); sleep(0.5); }
     end
 
     expiry_time.each do |key, time|
-      expiry_time.delete key if expiry_time[key] < Time.now
+      if expiry_time[key] < Time.now
+        hash_table.delete key
+        expiry_time.delete key
+      end
     end
   end
 end
 run YPBT_API
+
+def client_publish(channel_id, count)
+  EM.run {
+    client = Faye::Client.new("#{ENV['YPBT_APP']}/faye")
+    client.publish("/#{channel_id}", 'text' => "#{count}", 'attempts' => 1)
+  }
+end
