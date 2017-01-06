@@ -24,7 +24,7 @@ use Faye::RackAdapter, :mount => '/faye', :timeout => 25 do |bayeux|
     if count < POP_VIDEO_NUM
       client_publish(channel_id, count)
     elsif count >= POP_VIDEO_NUM
-      20.times { client_publish(channel_id, count); sleep(0.5); }
+      4.times { client_publish(channel_id, count); sleep(3); }
     end
 
     expiry_time.each do |key, time|
