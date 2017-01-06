@@ -4,6 +4,7 @@ require 'eventmachine'
 require './init.rb'
 
 use Faye::RackAdapter, :mount => '/faye', :timeout => 25 do |bayeux|
+  puts "puts anything."
   hash_table = {}
   expiry_time = {}
 
