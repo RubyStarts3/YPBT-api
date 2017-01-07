@@ -7,6 +7,7 @@ gem 'sinatra'
 gem 'puma'
 gem 'json'
 gem 'econfig'
+gem 'faye', '= 1.1.2'
 
 gem 'YPBT', '~> 0.2.8'
 gem 'sequel'

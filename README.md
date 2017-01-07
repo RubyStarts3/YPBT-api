@@ -141,6 +141,7 @@ API to access the information of comments following a given movie, such as autho
 <tr><td>tag_type</td><td>string</td></tr>
 <tr><td>comment_text_display</td><td>string</td></tr>
 <tr><td>api_key</td><td>string</td></tr>
+<tr><td>publish (optional)</td><td>true (enable websocket publish)</td></tr>
 </table>
 > *Return:*  
 <table>
