@@ -3,6 +3,8 @@ require 'sinatra'
 require 'econfig'
 require 'YPBT'
 require 'shoryuken'
+require 'faye'
+require 'eventmachine'
 
 require_relative 'base'
 

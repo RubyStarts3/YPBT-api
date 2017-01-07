@@ -38,7 +38,7 @@ class AddNewTimetag
     timetag_id = AddNewTimetagQuery.call(input[:video_info], input[:params])
 
     unless timetag_id.nil?
-      Right(timetag_id)
+      Right(timetag_id: timetag_id, params: input[:params])
     else
       Left(Error.new(:internal_error,
         "Cannot add new time_tag in choosed video " +
@@ -46,10 +46,22 @@ class AddNewTimetag
     end
   }
 
-  register :render_timetag_info, lambda { |timetag_id|
+  register :render_timetag_info, lambda { |input|
+    timetag_id = input[:timetag_id]
     timetag_info  = TimetagInfo.new(id: timetag_id)
     timetag_found = TimetagRecord.find(timetag_info)
-    Right(timetag_info: timetag_found)
+    Right(timetag_info: timetag_found, params: input[:params])
+  }
+
+  register :publish_timetag_info, lambda { |input|
+    video_id     = input[:params]['video_id']
+    timetag_info = input[:timetag_info]
+    if input[:params]['publish'] == "true"
+      Concurrent::Promise.execute do
+        PublishNewTimetagQuery.call(video_id, timetag_info)
+      end
+    end
+    Right(timetag_info: timetag_info)
   }
 
   def self.call(params)
@@ -58,6 +70,7 @@ class AddNewTimetag
       step :check_video # is already stored in database
       step :add_new_timetag
       step :render_timetag_info
+      step :publish_timetag_info
     end.call(params)
   end
 
