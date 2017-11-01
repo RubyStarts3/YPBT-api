@@ -10637,4 +10637,1229 @@ http_interactions:
         }
     http_version: 
   recorded_at: Thu, 15 Dec 2016 08:11:02 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:07 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - 481dac7c-3259-5096-93b2-fd888a4e1141
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>481dac7c-3259-5096-93b2-fd888a4e1141</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:07 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - e6b3e579-7056-5c50-96fd-b48dc841ef38
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>e6b3e579-7056-5c50-96fd-b48dc841ef38</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:07 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - e2a172b8-e51a-5f10-bc26-234c5d0d486c
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>e2a172b8-e51a-5f10-bc26-234c5d0d486c</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - fed268c5-4a78-57f1-aaa8-3931f2600f4c
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>fed268c5-4a78-57f1-aaa8-3931f2600f4c</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - 3c76bc85-a186-54d3-bcc7-ed71199efb1b
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>3c76bc85-a186-54d3-bcc7-ed71199efb1b</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - a9c452b0-ad36-5500-a9a6-0344152e57e0
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>a9c452b0-ad36-5500-a9a6-0344152e57e0</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - dd214807-417f-5c61-819e-19f3f967c43d
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>dd214807-417f-5c61-819e-19f3f967c43d</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - fe28bf76-62ad-509f-a391-ee82dab55a08
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>fe28bf76-62ad-509f-a391-ee82dab55a08</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - 2950bbde-aba4-536b-b1bd-ea2a13bc9a14
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>2950bbde-aba4-536b-b1bd-ea2a13bc9a14</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - 4a2664f8-243d-5e1d-8cb8-350c9c25fc00
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>4a2664f8-243d-5e1d-8cb8-350c9c25fc00</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - 3dc68f91-a1ee-5864-b8a9-de6519f68ba4
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>3dc68f91-a1ee-5864-b8a9-de6519f68ba4</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - e0e9aad4-0840-53f2-bc66-fb20b058b181
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>e0e9aad4-0840-53f2-bc66-fb20b058b181</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - 0312ab3b-03a1-5f07-b5ee-facfbbb92b1d
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>0312ab3b-03a1-5f07-b5ee-facfbbb92b1d</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - ba84a49c-0410-5d5f-ba1d-f568bc08289a
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>ba84a49c-0410-5d5f-ba1d-f568bc08289a</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - 5c118c69-d4d1-5dbd-977e-dd9d6cc9df43
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>5c118c69-d4d1-5dbd-977e-dd9d6cc9df43</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - 3f2a622e-bb6e-53f7-9bcd-33da037624a1
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>3f2a622e-bb6e-53f7-9bcd-33da037624a1</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - e0b712e4-20ca-55bf-8f55-431098d20400
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>e0b712e4-20ca-55bf-8f55-431098d20400</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - cfca4961-7196-537c-9b6e-1895c98ecda3
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>cfca4961-7196-537c-9b6e-1895c98ecda3</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - db5f92ec-d60b-5521-a0fa-c3186e13dd81
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>db5f92ec-d60b-5521-a0fa-c3186e13dd81</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - c5902bd0-3830-5ace-ae2a-7a2480286292
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>c5902bd0-3830-5ace-ae2a-7a2480286292</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - bcc27081-9c9e-500a-b1ec-217524865dab
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>bcc27081-9c9e-500a-b1ec-217524865dab</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - c7c71fbb-33e8-5eb9-91b3-4e4f8bf097c0
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>c7c71fbb-33e8-5eb9-91b3-4e4f8bf097c0</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - 80a41d74-50b0-5bf5-aa03-4c80e8a86801
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>80a41d74-50b0-5bf5-aa03-4c80e8a86801</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - 535cada3-6bee-59ca-8f5b-fc57d3f62a56
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>535cada3-6bee-59ca-8f5b-fc57d3f62a56</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
+- request:
+    method: post
+    uri: https://sqs.us-west-2.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=youtagit&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-linux
+      X-Amz-Date:
+      - 20170728T035607Z
+      Host:
+      - sqs.us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 3acc9431216d71d6722583a32f627356a3f73e1920abe6f62bdda9966d3bf34a
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI27ITDSAWB5JXXPA/20170728/us-west-2/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=e8f6dae3b1e705061add3e9daeef35044b01cbe1470db63900576ef877794c6b
+      Content-Length:
+      - '56'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Server
+      Date:
+      - Fri, 28 Jul 2017 03:56:08 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '311'
+      Connection:
+      - close
+      X-Amzn-Requestid:
+      - 7d57c025-2786-5893-aee5-91d19f9ec94e
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><Error><Type>Sender</Type><Code>InvalidClientTokenId</Code><Message>The
+        security token included in the request is invalid.</Message><Detail/></Error><RequestId>7d57c025-2786-5893-aee5-91d19f9ec94e</RequestId></ErrorResponse>
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 03:56:08 GMT
 recorded_with: VCR 3.0.3
