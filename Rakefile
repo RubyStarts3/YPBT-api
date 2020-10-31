@@ -13,7 +13,7 @@ end
 namespace :db do
   task :_setup do
     require 'sequel'
-    require_relative 'init'
+    require_relative 'config/init'
     Sequel.extension :migration
   end
 
@@ -49,7 +49,7 @@ end
 
 namespace :queue do
   require 'aws-sdk'
-  require_relative 'init'
+  require_relative 'config/init'
 
   desc "Create SQS queue for Shoryuken"
   task :create do
