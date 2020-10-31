@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    YPBT (0.2.8)
+    YPBT (0.2.10)
       http (~> 2.0)
       ruby-duration (~> 3.2.3)
     activesupport (5.0.0.1)
@@ -43,7 +43,7 @@ GEM
     cookiejar (0.3.3)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    domain_name (0.5.20161129)
+    domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dry-configurable (0.3.0)
       concurrent-ruby (~> 1.0)
@@ -94,14 +94,14 @@ GEM
     hashdiff (0.3.0)
     hirb (0.7.3)
     hitimes (1.2.4)
-    http (2.1.0)
+    http (2.2.2)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
       http-form_data (~> 1.0.1)
       http_parser.rb (~> 0.6.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    http-form_data (1.0.1)
+    http-form_data (1.0.3)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     iso8601 (0.9.1)
@@ -183,7 +183,7 @@ GEM
     uber (0.0.15)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.2)
+    unf_ext (0.0.7.7)
     vcr (3.0.3)
     webmock (2.1.0)
       addressable (>= 2.3.6)
@@ -191,14 +191,14 @@ GEM
       hashdiff
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.2)
+    websocket-extensions (0.1.5)
     wisper (1.6.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  YPBT (~> 0.2.8)
+  YPBT (~> 0.2.10)
   aws-sdk (~> 2)
   dry-container
   dry-monads
