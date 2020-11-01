@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 source 'https://rubygems.org'
 
-ruby '2.6.0'
+ruby '2.3.1'
 
 gem 'sinatra'
-gem 'puma'
+gem 'puma', '= 3.10.0'
 gem 'json'
 gem 'econfig'
 gem 'faye', '= 1.1.2'
 
-gem 'YPBT', '~> 0.2.10'
+gem 'YPBT', '~> 0.2.12'
 gem 'sequel'
 gem 'roar'
 gem 'multi_json'
