@@ -116,6 +116,7 @@ GEM
     minitest-rg (5.2.0)
       minitest (~> 5.0)
     multi_json (1.12.1)
+    nio4r (2.5.8)
     path_expander (1.0.0)
     pg (0.19.0)
     pry (0.10.4)
@@ -126,7 +127,8 @@ GEM
       byebug (~> 9.0)
       pry (~> 0.10)
     public_suffix (2.0.4)
-    puma (3.10.0)
+    puma (4.3.9)
+      nio4r (~> 2.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -214,7 +216,7 @@ DEPENDENCIES
   multi_json
   pg
   pry-byebug
-  puma (= 3.10.0)
+  puma (= 4.3.9)
   rack-test
   rake
   rerun
