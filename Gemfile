@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby '2.6.0'
 
 gem 'sinatra'
-gem 'puma', '= 3.10.0'
+gem 'puma', '4.3.12'
 gem 'json'
 gem 'econfig'
 gem 'faye', '= 1.1.2'
